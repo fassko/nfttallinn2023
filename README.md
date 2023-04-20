@@ -19,7 +19,7 @@ Deploy:
 npx hardhat run scripts/deploy.ts --network mumbai
 ```
 
-Verify smart contract and passing the constructor parameters:
+Verify the smart contract and pass the constructor parameters:
 
 ```sh
 npx hardhat verify 0xa4d8fd29c3b3715e4Ade9F89fbd76D57e2839ea7 --network mumbai 'NFT Tallinn 2023' 'NFTTLL23'
@@ -39,13 +39,13 @@ npx hardhat run scripts/deploy_proxy.ts --network mumbai
 npx hardhat run scripts/current-implementation.ts --network mumbai
 ```
 
-5. Verify the implemtnation contract
+5. Verify the implementation contract
 
 ```sh
 npx hardhat verify --network mumbai 0x69350e1C6702ebb88a47A19f24AaA856A95e85D3
 ```
 
-5. Add new function in the smart contract
+5. Add a new function in the smart contract
 
 6. Upgrade the implementation
 
