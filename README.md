@@ -1,5 +1,13 @@
 # NFT Tallinn 2023 workshop
 
+## Prerequisites
+
+Copy example `.env` and fill up the needed environment variables
+
+```sh
+cp .env.example .env
+```
+
 ## Effective Smart Contract Management
 
 In this workshop, we will go over smart contract code management. Topics we will cover:
@@ -45,7 +53,7 @@ npx hardhat run scripts/current-implementation.ts --network mumbai
 npx hardhat verify --network mumbai 0x69350e1C6702ebb88a47A19f24AaA856A95e85D3
 ```
 
-5. Add a new function in the smart contract
+5. Comment out the `getMyTicket` function
 
 6. Upgrade the implementation
 
@@ -62,13 +70,13 @@ npx hardhat run scripts/current-implementation.ts --network mumbai
 8. Verify the current implementation
 
 ```sh
-npx hardhat verify --network mumbai npx hardhat verify --network mumbai 0x6bfd02B1c1A8C62717Ba1826eaeb6d9F27ECceC2
+npx hardhat verify --network mumbai 0x6bfd02B1c1A8C62717Ba1826eaeb6d9F27ECceC2
 ```
 
 9. Upgrade contract to OpenZeppelin defender
 
 - add contract in OpenZeppelin defender
-- comment out the function
+- comment out the `getParticipantTicket` function
 - execute `npx hardhat run scripts/propose_upgrade.ts --network mumbai`
 - approve and execute proposal in OpenZeppelin Defender
 - get the current implementation `npx hardhat run scripts/current-implementation.ts --network mumbai`

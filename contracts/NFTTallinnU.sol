@@ -91,24 +91,20 @@ contract NFTTallinnU is
     }
 
     // ticket holder can call this
-    function getMyTicket() external view returns (Ticket memory) {
-        // check if ticket exists
-        require(tickets[msg.sender].id != 0, "Ticket does not exist!");
+    // function getMyTicket() external view returns (Ticket memory) {
+    //     // check if ticket exists
+    //     require(tickets[msg.sender].id != 0, "Ticket does not exist!");
 
-        return tickets[msg.sender];
-    }
-
-    // function getN() external pure returns (uint256) {
-    //     return 0;
+    //     return tickets[msg.sender];
     // }
 
-    // function getX() external pure returns (uint256) {
-    //     return 1;
-    // }
+    // function getParticipantTicket(
+    //     address participant
+    // ) external view onlyOwner returns (Ticket memory) {
+    //     require(tickets[participant].id != 0, "Ticket does not exist!");
 
-    function getY() external pure returns (uint256) {
-        return 2;
-    }
+    //     return tickets[participant];
+    // }
 
     // ticket holder can call this to sell ticket to someone else
     // here we don't have money transfers involved for sake of simplicity but that can be a homework
